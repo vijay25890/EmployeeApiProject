@@ -24,6 +24,9 @@ const EmployeeSchema = mongoose.Schema({
   email: {
     type: String,
   },
+  image: {
+    type: String,
+  },
 });
 
 const EmplyeeData = new mongoose.model("EmplyeeData", EmployeeSchema);

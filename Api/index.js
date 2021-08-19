@@ -43,10 +43,10 @@ Parameter       :empId
 Methods         get
 */
 try {
-  router.get("/employee/:empId", async (req, res) => {
-    const specdata = await EmplyeeData.findOne({ empId: req.params.empId });
+  router.get("/employee/:empid", async (req, res) => {
+    const specdata = await EmplyeeData.findOne({ empId: req.params.empid });
     if (!specdata) {
-      return res.send(`no employee found at empId ${req.params.empId}`);
+      return res.send(`no employee found at empId ${req.params.empid}`);
     }
     return res.send(specdata);
   });
@@ -88,10 +88,10 @@ Parameter       :empid
 Methods         put
 */
 try {
-  router.put("/employee/update/contactnumber/:rollno", async (req, res) => {
+  router.put("/employee/update/contactnumber/:empid", async (req, res) => {
     const updatenum = await EmplyeeData.findOneAndUpdate(
       {
-        rollNo: req.params.rollno,
+        empId: req.params.empid,
       },
       {
         contactNumber: req.body.contactNumber,
@@ -110,7 +110,7 @@ try {
 Route           /employee/delete/
 Description     delete a employee
 Access          PUBLIC
-Parameter       :rollNo
+Parameter       :empid
 Methods         delete
 */
 try {

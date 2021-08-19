@@ -1,6 +1,5 @@
 const express = require("express");
 require("./Database/conn");
-const StudentData = require("./Database/Models/index");
 const router = require("./API/index");
 
 const app = express();
