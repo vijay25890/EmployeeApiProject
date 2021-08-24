@@ -11,7 +11,6 @@ const EmployeeSchema = mongoose.Schema({
   },
   jobTitle: {
     type: String,
-    default: "Full Stack Web Devoloper",
   },
   experienceyear: {
     type: Number,
@@ -22,9 +21,6 @@ const EmployeeSchema = mongoose.Schema({
     },
   ],
   email: {
-    type: String,
-  },
-  image: {
     type: String,
   },
 });
